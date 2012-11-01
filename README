@@ -4,6 +4,5 @@ to include highlighting of each indent level with a different color.
 See http://viming.blogspot.com/2007/02/indent-level-highlighting.html for
 screenshots.
 
-
-TODO:
- - make it work for non-TAB-ed files.
+This plugin only works in GUI mode, but you can use it with the CSApprox
+plugin in console mode.
