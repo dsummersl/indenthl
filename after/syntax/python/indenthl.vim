@@ -85,38 +85,38 @@ command! -nargs=+ HiLink hi def <args>
 
 if (g:indenthlstyle == 1)
   " ONE: to make colors slightly darker at each level (in gui)
-  HiLink cTab1 term=NONE cterm=NONE ctermbg=NONE gui=NONE guibg=gray90
-  HiLink cTab2 term=NONE cterm=NONE ctermbg=gray gui=NONE guibg=gray85
-  HiLink cTab3 term=NONE cterm=NONE ctermbg=NONE gui=NONE guibg=gray80
-  HiLink cTab4 term=NONE cterm=NONE ctermbg=gray gui=NONE guibg=gray75
-  HiLink cTab5 term=NONE cterm=NONE ctermbg=NONE gui=NONE guibg=gray70
-  HiLink cTab6 term=NONE cterm=NONE ctermbg=gray gui=NONE guibg=gray65
-  HiLink cTab7 term=NONE cterm=NONE ctermbg=NONE gui=NONE guibg=gray60
+  HiLink cTab1 term=NONE gui=NONE guibg=gray90
+  HiLink cTab2 term=NONE gui=NONE guibg=gray85
+  HiLink cTab3 term=NONE gui=NONE guibg=gray80
+  HiLink cTab4 term=NONE gui=NONE guibg=gray75
+  HiLink cTab5 term=NONE gui=NONE guibg=gray70
+  HiLink cTab6 term=NONE gui=NONE guibg=gray65
+  HiLink cTab7 term=NONE gui=NONE guibg=gray60
 elseif (g:indenthlstyle == 2)
   " TWO: all alternating colors:
-  HiLink cTab1 term=NONE cterm=NONE ctermbg=NONE gui=NONE guibg=NONE
-  HiLink cTab2 term=NONE cterm=NONE ctermbg=lightgray gui=NONE guibg=gray95
-  HiLink cTab3 term=NONE cterm=NONE ctermbg=NONE gui=NONE guibg=NONE
-  HiLink cTab4 term=NONE cterm=NONE ctermbg=lightgray gui=NONE guibg=gray95
-  HiLink cTab5 term=NONE cterm=NONE ctermbg=NONE gui=NONE guibg=NONE
-  HiLink cTab6 term=NONE cterm=NONE ctermbg=lightgray gui=NONE guibg=gray95
-  HiLink cTab7 term=NONE cterm=NONE ctermbg=NONE gui=NONE guibg=NONE
+  HiLink cTab1 term=NONE gui=NONE guibg=NONE
+  HiLink cTab2 term=NONE gui=NONE guibg=gray95
+  HiLink cTab3 term=NONE gui=NONE guibg=NONE
+  HiLink cTab4 term=NONE gui=NONE guibg=gray95
+  HiLink cTab5 term=NONE gui=NONE guibg=NONE
+  HiLink cTab6 term=NONE gui=NONE guibg=gray95
+  HiLink cTab7 term=NONE gui=NONE guibg=NONE
 elseif (g:indenthlstyle == 3)
   " THREE: all alternating colors, but it gets darker with each alternate:
-  HiLink cTab1 term=NONE cterm=NONE ctermbg=NONE gui=NONE guibg=NONE
-  HiLink cTab2 term=NONE cterm=NONE ctermbg=lightgray gui=NONE guibg=gray95
-  HiLink cTab3 term=NONE cterm=NONE ctermbg=NONE gui=NONE guibg=NONE
-  HiLink cTab4 term=NONE cterm=NONE ctermbg=brown gui=NONE guibg=gray85
-  HiLink cTab5 term=NONE cterm=NONE ctermbg=NONE gui=NONE guibg=NONE
-  HiLink cTab6 term=NONE cterm=NONE ctermbg=blue gui=NONE guibg=gray75
-  HiLink cTab7 term=NONE cterm=NONE ctermbg=NONE gui=NONE guibg=NONE
+  HiLink cTab1 term=NONE gui=NONE guibg=NONE
+  HiLink cTab2 term=NONE gui=NONE guibg=gray95
+  HiLink cTab3 term=NONE gui=NONE guibg=NONE
+  HiLink cTab4 term=NONE gui=NONE guibg=gray85
+  HiLink cTab5 term=NONE gui=NONE guibg=NONE
+  HiLink cTab6 term=NONE gui=NONE guibg=gray75
+  HiLink cTab7 term=NONE gui=NONE guibg=NONE
 else
   echoe "indenthl: No such syntax style '". g:indenthlstyle ."' - use 1,2, or 3"
 endif
 
 " Error hilighting:
 if (g:indenthlshowerrors)
-  HiLink cTabError term=NONE cterm=NONE ctermbg=Red gui=NONE guibg=Red
+  HiLink cTabError term=NONE gui=NONE guibg=Red
 endif
 
 delcommand HiLink
